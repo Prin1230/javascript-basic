@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 >Event or  time</h1>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    //in this setTimeOut function hm maangte hai time ki itna time de do uske baad hm execute kr denge
+
+    // setTimeout(function(){
+    //     console.log("Prince");
+    // },2000)
+ //we are giving reference
+const sayPrince=function(){
+    console.log("Prince");
+}
+
+const changetext=function(){
+    document.querySelector('h1').innerHTML="prince is don";
+
+
+}
+
+const changeme=setTimeout(changetext,2000);
+document.querySelector("#stop").addEventListener('click',function(){
+    clearInterval(changeme);
+    console.log("stopped");
+})
+
+
+
+    //setInterval basically ye krta ky hai ki mujhe ek time de do aur utne interval ke baad hm aapka kaam krte jaynege
+    </script>
+</html>

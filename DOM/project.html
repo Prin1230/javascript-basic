@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="windowopen()">Click me to open a window</button>
+        <button onclick="windowclose()">Click me to close the window</button>
+    </div>
+    <script>
+        var win;
+
+        function windowopen() {
+            win = window.open("http://www.google.com", "", "width=500,height=500,left=200,top=200");
+        }
+
+        function windowclose() {
+            win.close();
+        }
+
+        // Use parent for opening links in the same tab
+        function openInSameTab() {
+            window.parent.location.href = "http://www.example.com";
+        }
+    </script>
+</body>
+</html>
